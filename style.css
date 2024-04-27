@@ -12,10 +12,7 @@
     margin: 0%;
     padding: 0%;
 }
-html, body{
-    width: 100vw;
-    height: 100vh;
-}
+
 
 section{    
     font-family: "Regular";
@@ -70,7 +67,7 @@ form > label{
 }
 .campo > input{
     display: block;
-    width: 95%;
+    width: 94%;
     height: 50px;
     margin: 5px 0px;
     border-radius: 8px;
