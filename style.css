@@ -1,0 +1,101 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: "Roboto";
+    src: url(assets/fonts/Roboto-Bold.ttf);
+}
+@font-face {
+    font-family: "Regular";
+    src: url(assets/fonts/Roboto-Regular.ttf);
+}
+*{
+    margin: 0%;
+    padding: 0%;
+}
+html, body{
+    width: 100vw;
+    height: 100vh;
+}
+
+section{    
+    font-family: "Regular";
+    font-weight: 400;
+    color: hsl(235, 18%, 26%);
+}
+
+#imagem{
+    display: block;
+    background-image: url(assets/images/illustration-sign-up-mobile.svg);
+    background-position: center bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 340px;
+    width: 100%;
+}
+
+h1{
+    font-family: 'Roboto';
+    font-size: 2.5em;
+    margin: 23px;
+    font-weight: 700;
+}
+
+p{
+    margin: 20px;
+}
+
+ul{
+    margin: 20px;
+    list-style: none;
+    margin-bottom: 25px;
+}
+li{
+    margin-bottom: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.confirm{
+    float: left;
+    width: 30%;
+    width: 20px;
+}
+
+form{
+    margin: 20px;
+}
+form > label{
+    font-weight: 700;
+    font-size: x-small;
+}
+.campo > input{
+    display: block;
+    width: 95%;
+    height: 50px;
+    margin: 5px 0px;
+    border-radius: 8px;
+    border: 2px solid hsl(231, 7%, 60%, 0.438);
+    padding-left: 20px;
+    font-size: 1em;
+}
+#iemail::placeholder {
+    color:  hsl(231, 7%, 60%, 0.438);
+    font-weight: 700;
+}
+
+form > input[type=submit]{
+    display: block;
+    width: 100%;
+    height: 50px;
+    margin: 5px 0px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: 700;
+    background-color: hsl(234, 29%, 20%);
+    color: white;
+}
+form > input[type=submit]:hover{
+    background-color: hsl(235, 18%, 26%);
+}
