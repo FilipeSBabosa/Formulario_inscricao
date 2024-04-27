@@ -97,5 +97,10 @@ form > input[type=submit]{
     color: white;
 }
 form > input[type=submit]:hover{
-    background-color: hsl(235, 18%, 26%);
+    background-image: linear-gradient(to left ,hsl(17, 93%, 58%) , hsl(342, 100%, 67%))
+    
+}
+
+input[type="email"]:invalid {
+    border-color:hsl(4, 100%, 67%);
 }
