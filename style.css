@@ -64,6 +64,7 @@ form{
 form > label{
     font-weight: 700;
     font-size: x-small;
+    font-weight: bolder;
 }
 .campo > input{
     display: block;
@@ -74,6 +75,7 @@ form > label{
     border: 2px solid hsl(231, 7%, 60%, 0.438);
     padding-left: 20px;
     font-size: 1em;
+    cursor: pointer;
 }
 #iemail::placeholder {
     color:  hsl(231, 7%, 60%, 0.438);
@@ -92,6 +94,7 @@ form > input[type=submit]{
     font-weight: 700;
     background-color: hsl(234, 29%, 20%);
     color: white;
+    cursor: pointer;
 }
 form > input[type=submit]:hover{
     background-image: linear-gradient(to left ,hsl(17, 93%, 58%) , hsl(342, 100%, 67%))
@@ -99,5 +102,5 @@ form > input[type=submit]:hover{
 }
 
 input[type="email"]:invalid {
-    border-color:hsl(4, 100%, 67%);
+    
 }
