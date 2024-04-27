@@ -1,38 +1,64 @@
-@charset "UTF-8";
-
-@media screen and (min-width: 800px){
-    body{
-        background-color: hsl(235, 18%, 26%);
+@media (min-width: 550px) {
+    body {
+        place-content: center;
+        background-color: var(--clr-gray400);
+        padding: 1.5rem;
     }
-    main{
-        display: grid;
+    .main-container {
+        margin-inline: auto;
         background-color: white;
-        width: 50vw;
-        height: 70vh;
-        border-radius: 20px;
-        margin: auto;
-        margin-top: 100px;
-        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.247);
+        overflow: hidden;
+        border-radius: 2.2rem;
     }
-
-    #imagem{
+    .email-container {
+        margin-inline: auto;
+    } 
+    .success-container {
+        padding: 3em;
+        gap: 1.3rem;
+    
+        background-color: white;
+        border-radius: 1.8rem;
+    }
+    .success-container h1 {
+        font-size: 3rem;
+        margin-bottom: .3em;
+    }
+}
+@media (min-width: 740px) {
+    .main-container {
+        max-width: 930px;
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        padding: 1.5rem;
+    }
+    .img-wrap {
+        width: 45%;
+        display: flex;
+    }
+    .img-desktop {
+        display: block;
+        width: 100%;
+    }
+    .img-mobile {
         display: none;
     }
-
-    #desktop{
-        display: block;
-        background-image: url(assets/images/illustration-sign-up-desktop.svg);
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: right;
-        float: right;
-        width: 50%;
-        height: 90%;
-        margin: 15px;
-
+    .content-wrap {
+        padding: 2.5rem;
+        width: 53%;
     }
-    #submit{
-        float: left;
-        width: 40%;
+    .email-container {
+        margin-top: 1rem;
+    } 
+}
+@media (min-width: 903px) {
+    .title {
+        font-size: 3.5rem;
+        margin-bottom: .3em;
+    }
+    .email-container {
+        margin-top: 3rem;
     }
 }

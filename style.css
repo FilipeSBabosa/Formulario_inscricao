@@ -1,106 +1,146 @@
-@charset "UTF-8";
-
-@font-face {
-    font-family: "Roboto";
-    src: url(assets/fonts/Roboto-Bold.ttf);
+:root {
+    --clr-tomato: hsl(4, 100%, 67%);
+    --clr-gray500: hsl(234, 29%, 20%);
+    --clr-gray400: hsl(235, 18%, 26%);
+    --clr-gray200: hsl(231, 7%, 60%);
 }
-@font-face {
-    font-family: "Regular";
-    src: url(assets/fonts/Roboto-Regular.ttf);
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-*{
-    margin: 0%;
-    padding: 0%;
-}
-
-
-section{    
-    font-family: "Regular";
-    font-weight: 400;
-    color: hsl(235, 18%, 26%);
-}
-
-#imagem{
+img {
+    max-width: 100%;
     display: block;
-    background-image: url(assets/images/illustration-sign-up-mobile.svg);
-    background-position: center bottom;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 340px;
+}
+button, input {
+    cursor: pointer;
+}
+body {
+    font-family: "Roboto", sans-serif;
+    /* 400 700 */
+    font-size: 1rem;
+    color: var(--clr-gray500);
+    line-height: 1.5;
+    display: grid;
+    min-height: 100vh;
+}
+/* main section */
+.main-container {
+    margin-inline: auto;
     width: 100%;
 }
-
-h1{
-    font-family: 'Roboto';
-    font-size: 2.5em;
-    margin: 23px;
-    font-weight: 700;
+/* img */
+.img-desktop {
+    display: none;
 }
-
-p{
-    margin: 20px;
+.img-mobile {
+    width: 100%;
 }
-
-ul{
-    margin: 20px;
+/* content */
+.content-wrap {
+    padding: 1.5em;
+}
+.title {
+    font-size: 2.4rem;
+    margin-bottom: .3em;
+}
+ul {
     list-style: none;
-    margin-bottom: 25px;
+    margin-block: 1.3em;
 }
-li{
-    margin-bottom: 20px;
+ul > * {
+    margin-bottom: .5em;
+}
+ul li {
     display: flex;
-    gap: 20px;
+    gap: 1rem;
+    align-items: start;
 }
-
-.confirm{
-    float: left;
-    width: 30%;
-    width: 20px;
+/* form */
+.email-container {
+    max-width: 400px; 
 }
-
-form{
-    margin: 20px;
-}
-form > label{
-    font-weight: 700;
-    font-size: x-small;
-    font-weight: bolder;
-}
-.campo > input{
-    display: block;
-    width: 94%;
-    height: 50px;
-    margin: 5px 0px;
-    border-radius: 8px;
-    border: 2px solid hsl(231, 7%, 60%, 0.438);
-    padding-left: 20px;
-    font-size: 1em;
-    cursor: pointer;
-}
-#iemail::placeholder {
-    color:  hsl(231, 7%, 60%, 0.438);
-    font-weight: 700;
-}
-
-form > input[type=submit]{
-    display: block;
+.email-container > * {
     width: 100%;
-    height: 50px;
-    margin: 5px 0px;
-    margin-top: 20px;
-    border: none;
-    border-radius: 8px;
-    font-size: 1em;
+}
+.label-msg {
+    display: flex;
     font-weight: 700;
-    background-color: hsl(234, 29%, 20%);
+    font-size: .8rem;
+    justify-content: space-between;
+}
+.error-msg {
+    color: var(--clr-tomato);
+    display: none;
+}
+#email {
+    height: 54px;
+    margin-top: .3em;
+    border: 1px solid hsl(0, 0%, 78%);
+    padding-inline: 1.5rem;
+    border-radius: .6rem;
+    font-size: .9rem;
+    font: inherit;
+    margin-bottom: 1.5rem;
+    transition: .4s ease;
+}
+#email::placeholder {
+    color: hsl(0, 0%, 78%);
+}
+#email:focus {
+    outline: none;
+    border-color: var(--clr-gray500);;
+}
+button {
+    font-size: .9rem;
+    font-weight: 700;
     color: white;
-    cursor: pointer;
+    border: none;
+    height: 56px;
+    background-color: var(--clr-gray400);
+    border-radius: .6rem;
+    transition: all .3s;
 }
-form > input[type=submit]:hover{
-    background-image: linear-gradient(to left ,hsl(17, 93%, 58%) , hsl(342, 100%, 67%))
+button:hover {
+    background: linear-gradient(to right, hsl(351, 98%, 66%),
+    var(--clr-tomato));
+    box-shadow: 5px 20px 20px  hsla(351, 98%, 66%, 0.186);
     
 }
-
-input[type="email"]:invalid {
-    
+/* success section */
+.success-container {
+    padding-inline: 1.4em;
+    padding-block: 3em;
+    display: grid;
+    justify-content: space-between;
+    align-items: end;
+    gap: 1rem;
+    height: 100%;
+    max-width: 504px;
+    margin-inline: auto;
+    display: none;
+}
+.success-container img {
+    margin-bottom: 1.5em;
+}
+.success-container span {
+    font-weight: 700;
+}
+.success-container h1 {
+    margin-bottom: .8em;
+    line-height: 1;
+}
+.success-container button {
+    width: 100%;
+}
+/* hide-show */
+.error-msg.show {
+    display: block;
+}
+.hide {
+    display: none;
+}
+.success-container.show {
+    display: grid;
 }
